@@ -54,7 +54,7 @@ class People(object):
 
     def infect(self, other, current_time):
         # 感染
-        # 感染判定 距离为5时有25%概率感染
+        # 感染判定 距离为5时有2%概率感染，超级传播者、发病状态会影响传播概率
         judge = random.randint(1, 100) * (self.super_spreader + 1) + (self.status - 1) * 10
         if self != other:
             dx, dy = self.x - other.x, self.y - other.y
